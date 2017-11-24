@@ -1,0 +1,74 @@
+.main-hero {
+  $col1: rgba(#000, 0.7);
+  $col2: rgba(#000, 0.85);
+  height: 100vh;
+  background: linear-gradient(180deg, $col1 0%, $col1 50%, $col2 50%, $col2 100%),
+  url("../images/main-banner.jpg") no-repeat;
+  background-size: 5px 5px, cover;
+  background-position: center bottom;
+  display: flex;
+}
+
+.main-hero .container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 700;
+
+}
+
+.main-logo {
+  margin: 20px;
+}
+
+.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav a {
+  color: rgba(#fff, 0.4);
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: 0.4s all;
+  position: relative;
+
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+.main-nav a:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  opacity: 0;
+  height: 1px;
+  background: $colorPrimary;
+  transition: 1s all;
+}
+
+.main-nav a:hover {
+  color: $colorPrimary;
+}
+
+.main-nav a:hover:before {
+  left: 10px;
+  right: 10px;
+  opacity: 1;
+}
+
